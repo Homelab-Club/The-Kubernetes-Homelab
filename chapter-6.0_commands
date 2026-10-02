@@ -1,0 +1,11 @@
+chapter 6.3. Download and install the repository signing key command:
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.37/deb/Release.key | sudo gpg --dearmor --yes -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+
+chapter 6.3. Add the Kubernetes repository command:
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.37/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+
+chapter 6.4. Initialize the cluster command:
+sudo kubeadm init --apiserver-advertise-address=10.10.20.20 --pod-network-cidr=192.168.0.0/16
+
+chapter 6.7. Workers Join Command:
+kubeadm join 10.10.20.20:6443 --token <token> --discovery-token-ca-cert-hash sha256:<hash>
