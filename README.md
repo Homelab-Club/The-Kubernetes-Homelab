@@ -60,7 +60,7 @@ Check the relevant chapter for the specific requirements.
 
 Homelab Club helps IT enthusiasts, self-hosters, and aspiring IT professionals learn through practical homelab projects.
 
-Explore more resources and apparel at [homelab-club.com](https://homelab-club.com).
+Explore more book resources and apparel at [homelab-club.com](https://homelab-club.com).
 
 ## Feedback and Contributions
 
