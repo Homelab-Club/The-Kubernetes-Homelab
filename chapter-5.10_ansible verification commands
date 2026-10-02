@@ -1,0 +1,15 @@
+# 5.10 Verify the Results
+Check swap command: 
+ansible kubernetes -b -m command -a "swapon --show" --ask-pass --ask-become-pass
+
+Check IPv4 forwarding command:
+ansible kubernetes -b -m command -a "sysctl net.ipv4.ip_forward" --ask-pass --ask-become-pass
+
+Check kernel modules command:
+ansible kubernetes -b -m shell -a "lsmod | grep -E '^(overlay|br_netfilter)'" --ask-pass --ask-become-pass
+
+Check containerd command:
+ansible kubernetes -b -m command -a "systemctl is-active containerd" --ask-pass --ask-become-pass
+
+Check the cgroup driver command:
+ansible kubernetes -b -m shell -a "grep -n 'SystemdCgroup' /etc/containerd/config.toml" --ask-pass --ask-become-pass
