@@ -1,5 +1,5 @@
 # The-Kubernetes-Homelab
-<img width="1410" height="2250" alt="The Kubernetes Homelab" src="https://github.com/user-attachments/assets/a459d414-6e0a-4e03-95b4-277d424ca570" />
+<img width="705" height="1125" alt="The Kubernetes Homelab" src="https://github.com/user-attachments/assets/a459d414-6e0a-4e03-95b4-277d424ca570" />
 # 📖 The Kubernetes Homelab
 
 **By Kevin Villarreal | Homelab Club**
