@@ -1,6 +1,6 @@
-chapter 7.3 Install the Calico custom resource definitions command:
+chapter 7.3. Install the Calico custom resource definitions command:
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.33.0/manifests/v3_projectcalico_org.yaml
 
-chapter 7.3 Install the Tigera Operator command:
+chapter 7.3. Install the Tigera Operator command:
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.33.0/manifests/tigera-operator.yaml
 
