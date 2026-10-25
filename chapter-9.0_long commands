@@ -4,3 +4,30 @@ kubectl expose deployment nginx \
   --port=80 \
   --target-port=80 \
   --type=ClusterIP
+
+9.7 Create a ConfigMap for our Nginx application:
+kubectl create configmap nginx-settings \
+  --from-literal=APP_ENV=homelab \
+  --from-literal=APP_NAME=HomelabClub
+
+9.7 In the deployment.yaml add an envFrom section under the container definition:
+      containers:
+        - name: nginx
+          image: nginx:stable
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: nginx-settings
+
+9.8 Create a demonstration Secret:
+kubectl create secret generic demo-credentials \
+  --from-literal=username=demo-user \
+  --from-literal=password=replace-this-demo-value
+
+9.8 Add this section under the Nginx container in deployment.yaml:
+          envFrom:
+            - configMapRef:
+                name: nginx-settings
+            - secretRef:
+                name: demo-credentials
