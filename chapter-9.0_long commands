@@ -1,1 +1,6 @@
-9.6 Access the Nginx Application
+9.6 Create a Service named nginx
+kubectl expose deployment nginx \
+  --name=nginx \
+  --port=80 \
+  --target-port=80 \
+  --type=ClusterIP
