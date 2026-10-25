@@ -10,3 +10,7 @@ kubectl get service nginx \
   -o jsonpath='{.spec.ports[0].nodePort}'
 
 echo
+
+10.9 Connect to k8s-worker01 and create a Test Page file:
+echo '<h1>Homelab Club Persistent Storage</h1>' \
+  | sudo tee /mnt/kubernetes-data/nginx/index.html
