@@ -1,4 +1,4 @@
-9.6 Create a Service named nginx
+9.6 Create a Service named nginx:
 kubectl expose deployment nginx \
   --name=nginx \
   --port=80 \
